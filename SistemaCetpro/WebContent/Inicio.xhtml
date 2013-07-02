@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui"
+   xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+</h:head>
+<h:body>
+	
+   <h:form id="formLogin">
+      
+	<center>
+	<br/><br/><br/><br/><br/><br/><br/>
+    <p:panel style="width:30%;text-align: center" header="CETPRO CARABAYLLO">  
+        
+        	<table>
+        		<tr>
+        			<td style="text-align: right">
+        			<h:outputLabel value="Usuario:" />  
+        			</td>
+        			<td>
+        			<p:inputText id="name1" required="true" />
+        			</td>
+        		</tr>
+        		<tr>
+        			<td>        			
+        			<h:outputLabel value="Password:" />
+        			</td>
+        			<td>
+        			<p:inputText id="name2" required="true" />
+        			</td>
+        		</tr>
+        	</table>  
+       
+        <p:button value="Iniciar Sesion" icon="ui-icon-key"/>  
+		
+    </p:panel>  
+	</center>
+   </h:form>
+   
+   <h:form>  
+                  
+	    <p:growl id="growl" showDetail="true" sticky="true" />  
+	      
+	    <p:panel header="Growl">  
+	        <h:panelGrid columns="2">  
+	            <h:outputText value="Your Name: *" />   
+	            <p:inputText value="#{growlBean.text}" required="true" label="Name"/>  
+	        </h:panelGrid>  
+	  
+	        <p:commandButton value="Save" actionListener="#{growlBean.save}" update="growl"/>  
+	    </p:panel>  
+	      
+	</h:form>  
+</h:body>
+</html>
